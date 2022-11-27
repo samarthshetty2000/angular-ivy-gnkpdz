@@ -1,0 +1,23 @@
+
+<h1>
+  To Do App
+</h1>
+
+<div class="todolist" *ngIf="todo.length">
+  <ul>
+    <li *ngFor="let element of todo; let i=index">
+          
+     {{element}} 
+     <button (click)="removeItem(i)">Remove</button>
+    <li>
+   
+  </ul>
+</div>
+
+<div class="container">
+      <form>
+        <input type="text" name="todoItem" [(ngModel)]="todoItem">
+        <button type="submit" (click)="addItem()">Add</button>
+      </form>
+
+</div>
